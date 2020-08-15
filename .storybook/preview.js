@@ -24,6 +24,8 @@ function loadStories() {
 configure(loadStories, module);
 addDecorator(withA11y);
 
-addDecorator((storyFn) => (
-  <Provider unstable_system={system}>{storyFn()}</Provider>
+addDecorator((storyFn, root) => (
+  <Provider unstable_system={system}>
+    <div id={root.id}>{storyFn()}</div>
+  </Provider>
 ));

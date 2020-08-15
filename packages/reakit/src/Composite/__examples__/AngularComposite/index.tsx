@@ -5,6 +5,7 @@ import {
   CompositeGroup,
   CompositeItem,
 } from "reakit/Composite";
+import "./style.css";
 
 export default function AngularComposite() {
   const composite = useCompositeState({ unstable_angular: true });
